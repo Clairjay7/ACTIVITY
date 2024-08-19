@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 int main(){
+	string path = ""
 	
+
 	int number;
 	cout<<"MAIN MENU"<<endl;
 	cout<<"----------"<<endl;
@@ -11,7 +13,12 @@ int main(){
 	cout<<"4. Exit"<<endl;
 	cout<<"Enter the number: ";
 	cin>>number ;
+	if(number == 1){
+		
+		
+	}
 	
+
 
 }
 

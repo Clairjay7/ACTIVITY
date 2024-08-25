@@ -7,7 +7,8 @@ void menu_display();
 void list_files();
 void new_directory();
 void working_directory();
-void exit_d();
+void list_all();
+
 
 
 int main(){
@@ -39,14 +40,42 @@ int main(){
 		
 	}
 	void menu_display(){
-		int input1;
 		cout<<"1. To Display List of Files"<<endl;
 		cout<<"2. To Create New Directory"<<endl;
 		cout<<"3. To Change the Working Directory"<<endl;
 		cout<<"4. Exit"<<endl;
 		cout<<"Enter the Number";
-		cin>>input1;
+		
 	}
+	void list_files(){
+		int input;
+		cout<<"1. To Display List of Files"<<endl;
+		cout<<"2. To Create New Directory"<<endl;
+		cout<<"3. To Change the Working Directory"<<endl;
+		cout<<"4. Exit"<<endl;
+		cout<<"Enter the Number";
+		cin>>input;
+		
+		cout<<"LIST FILE DETAIL";
+		cout<<"----------------";
+		cout<<"1. List All Files";
+		cout<<"2. List All Files";
+		cout<<"3. List All Files";
+	
+		
+		switch (input){
+			case 1:
+				list_all();
+				break;
+				
+				
+		}
+		
+	}
+	void new_directory();
+	
+	
+		
 	
 	
 	

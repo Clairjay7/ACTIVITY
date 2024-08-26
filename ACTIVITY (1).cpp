@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <io.h>
 
 using namespace std;
 
@@ -8,6 +9,8 @@ void list_files();
 void new_directory();
 void working_directory();
 void list_all();
+void extens_files();
+void list_namewise();
 
 
 
@@ -55,34 +58,49 @@ int main(){
 		cout<<"4. Exit"<<endl;
 		cout<<"Enter the Number";
 		cin>>input;
-		
-		cout<<"LIST FILE DETAIL";
-		cout<<"----------------";
-		cout<<"1. List All Files";
-		cout<<"2. List All Files";
-		cout<<"3. List All Files";
 	
-		
 		switch (input){
 			case 1:
 				list_all();
 				break;
-				
-				
+			case 2:
+				 extens_files();
+				break;
+			case 3:
+				list_namewise();
+				break;
+			case 4:
+				cout<<"Exit";
+				break;
+			default:
+				cout<<"Invalid Input!";
+		
 		}
 		
 	}
-	void new_directory();
-	
+	void list_all(){
+		
+		struct _finddata_t fileinfo;
+    intptr_t handle = _findfirst(pattern.c_str(), &fileinfo);
+
+    if (handle == -1) {
+        cout << "No files found."<<endl;
+        return;
+    }
+
+    do {
+        cout << fileinfo.name<<endl;
+    } while (_findnext(handle, &fileinfo) == 0);
+
+    _findclose(handle);
+}
 	
 		
+		
+		
+	}
 	
-	
-	
-
-
-
-
-
-
+	void new_directory(){
+		
+	}
 
